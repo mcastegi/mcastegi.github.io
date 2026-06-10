@@ -3,6 +3,8 @@
 
 ![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
 
+Read this website for instructions: https://jayrobwilliams.com/posts/2020/06/academic-website/
+
 # Getting Started
 
 1. Register a GitHub account if you don't have one and confirm your e-mail (required!)

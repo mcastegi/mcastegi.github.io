@@ -78,7 +78,29 @@
 /* Info notice */
 
 .notice--info {
-  @include notice($info-color);
+  margin: 2em 0 !important;
+  padding: 1em 1.5em;
+  font-family: $global-font-family;
+  font-size: 0.9em;
+  text-indent: initial;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 0;
+  box-shadow: none;
+  color: var(--global-text-color);
+
+  a {
+    color: var(--global-text-color);
+    text-decoration: underline;
+
+    &:hover {
+      color: #004676;
+    }
+  }
+
+  p:last-child {
+    margin-bottom: 0 !important;
+  }
 }
 
 /* Warning notice */

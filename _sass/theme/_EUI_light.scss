@@ -1,21 +1,21 @@
 /* ==========================================================================
-   EUI-inspired skin, based on the Air skin
+   Dark skin, based on the Minimal Mistakes skin
    ========================================================================== */
 
 /* Color codes used for the theme */
-$primary-color              : #7a8288;
+$primary-color              : #2581c4;
 $dark-primary-color         : mix(#000, $primary-color, 40%);
 $darker-primary-color       : mix(#000, $primary-color, 60%);
 $light-primary-color        : mix(#000, $primary-color, 50%);
 
-$background                 : #ffffff;
+$background                 : #252a34;
 $background-light           : mix(#fff, $background, 20%);
 $background-lighter         : mix(#fff, $background, 90%);
-$text                       : #222831;
-$link                       : #222831;
+$text                       : #eaeaea;
+$link                       : mix($primary-color, $text, 40%);
 $link-dark                  : mix(#000, $link, 25%);
 $link-light                 : mix(#fff, $link, 25%);
-$footer                     : $primary-color;
+$footer                     : mix(#000, $background, 30%);
 
 /* Color codes used for the site */
 $danger-color               : #ee5f5b;
@@ -23,11 +23,6 @@ $info-color                 : #2f7f93;
 $notice-color               : #7a8288;
 $success-color              : #62c462;
 $warning-color              : #f89406;
-
-
-
-
-
 
 /* Other basic settings for the template */
 $border-radius              : 4px;
@@ -40,7 +35,7 @@ $sidebar-link-max-width     : 250px;
 $sidebar-screen-min-width   : 1024px;
 
 /* Dark theme for the site */
-:root {
+html[data-theme="dark"] {
     --global-base-color                 : #{$background};
     --global-bg-color                   : #{$background};
     --global-footer-bg-color            : #{$footer};
@@ -53,21 +48,8 @@ $sidebar-screen-min-width   : 1024px;
     --global-link-color-hover           : #{$link-dark};
     --global-link-color-visited         : #{$link-light};
     --global-masthead-link-color        : #{$text};
-    --global-masthead-link-color-hover  : #{$link};
+    --global-masthead-link-color-hover  : #{$background-light};
     --global-text-color                 : #{$text};
     --global-text-color-light           : #{$light-primary-color};
     --global-thead-color                : #{$background-lighter};
-}
-
-/* Links: dark text with underline, no color */
-.page__content a,
-.archive__item a,
-p a {
-  color: #{$text};
-  text-decoration: underline;
-
-  &:hover {
-    color: #{$dark-primary-color};
-    text-decoration: underline;
-  }
 }
