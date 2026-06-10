@@ -190,9 +190,7 @@
   }
 
   button {
-    position: absolute;
     height: 2.5rem;
-    right: 0;
     padding: 0 0.5rem;
     border: 0;
     outline: none;
@@ -200,24 +198,21 @@
     color: var(--global-text-color);
     cursor: pointer;
     z-index: 100;
-  }
-
-  @media (max-width: 768px) {
-    .visible-links li:not(:first-child) {
-      display: none;
-    }
+    display: none;
   }
 
   .visible-links {
     display: table;
+    width: 100%;
 
     li {
       display: table-cell;
       vertical-align: middle;
+      white-space: nowrap;
 
       &:first-child {
         font-weight: bold;
-        text-wrap: wrap;
+        width: 100%;
 
         a {
           margin-left: 0;
@@ -263,6 +258,20 @@
             -ms-transform: scaleX(1);
                 transform: scaleX(1); /* reveal*/
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    button {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+    .visible-links li:not(:first-child) {
+      display: none;
     }
   }
 

@@ -6,6 +6,10 @@
   @include container;
   @include clearfix;
   margin-top: 2em;
+
+  @media (max-width: 768px) {
+    margin-top: 1.5em;
+  }
   padding-left: 1em;
   padding-right: 1em;
   animation: intro 0.3s both;
@@ -17,6 +21,12 @@
 }
 
 .page {
+  @media (max-width: 768px) {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+
   @include breakpoint($large) {
     @include span(10 of 12 last);
     @include prefix(0.5 of 12);

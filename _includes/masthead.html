@@ -3,22 +3,28 @@
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <button><span class="navicon"></span></button>
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg persist"><a href="{{ base_path }}/">{{ site.title }}</a></li>
+      <nav id="custom-nav" style="display:flex; align-items:center; width:100%; position:relative;">
+        <div class="nav-title">
+          <a href="{{ base_path }}/">{{ site.title }}</a>
+        </div>
+        <div style="flex:1;"></div>
+        <div class="custom-nav-links">
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
             {% else %}
               {% assign domain = base_path %}
             {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
           {% endfor %}
-
-        </ul>
-        <ul class="hidden-links hidden"></ul>
+        </div>
+        <button id="custom-nav-toggle" onclick="document.querySelector('.custom-nav-links').classList.toggle('open');">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
+
     </div>
   </div>
 </div>
