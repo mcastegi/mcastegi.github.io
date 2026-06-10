@@ -197,9 +197,15 @@
     border: 0;
     outline: none;
     background-color: var(--global-bg-color);
-    color: #fff;
+    color: var(--global-text-color);
     cursor: pointer;
     z-index: 100;
+  }
+
+  @media (max-width: 768px) {
+    .visible-links li:not(:first-child) {
+      display: none;
+    }
   }
 
   .visible-links {
